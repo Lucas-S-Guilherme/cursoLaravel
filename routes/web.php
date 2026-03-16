@@ -2,6 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/main/{value}', function ($value) {
+    return view('main', ['value' => $value]);
 });
