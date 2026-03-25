@@ -33,6 +33,13 @@
                             <div class="mb-3">
                                 <button type="submit" class="btn btn-secondary w-100">LOGIN</button>
                             </div>
+
+                            {{-- invalid login --}}
+                            @if(session('loginError'))
+                            <div class="alert alert-danger text-center">
+                                {{ session('loginError') }}
+                            </div>
+                            @endif
                         </form>
                     </div>
                 </div>
